@@ -55,7 +55,7 @@ L’ensemble de données, `creditcard.csv`, a été téléchargé depuis [Kaggle
 Vous pouvez explorer l’application déployée à cette adresse : [Analyse des Transactions Bancaires](https://analysetransactionbancaire.streamlit.app/).
 
 ## Crédits
-- Dataset : [Kaggle - Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlgulb/creditcardfraud).
+- Dataset : [Kaggle - Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud).
 - Analyse et visualisation : Réalisées avec Python et Streamlit.
 
 
