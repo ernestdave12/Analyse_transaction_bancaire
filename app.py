@@ -47,14 +47,28 @@ def show_data_profile(df):
 
     #Afficher les informations sur les variables
     st.write("Informations sur les variables")
-    st.write(df.info())
-    st.write("""Toutes les variables caractéristiques (features) sont de type float64, ce qui indique qu'elles représentent des données quantitatives continues. La variable cible, Class, est de type int64, une donnée qualitative nominale.
+    st.write(dataframe_summary(df))
+    st.markdown("""
+    Toutes les variables caractéristiques (features) sont de type `float64`, ce qui indique qu'elles représentent des données quantitatives continues. La variable cible, `Class`, est de type `int64`, une donnée qualitative nominale.
 
-    - ** Time ** : Nombre de secondes écoulées depuis la première transaction enregistrée jusqu'à la transaction en cours.
-    - ** V1 à V28 ** : Variables dérivées d'une réduction de dimensionnalité par l'algorithme PCA (Principal Component Analysis). Ces variables ont été anonymisées pour préserver la confidentialité des clients.
-    - ** Amount ** : Montant de la transaction.
-    - ** Class ** : Variable cible indiquant deux classes : 0 pour une transaction normale et 1 pour une transaction frauduleuse.
+    - **Time** : Nombre de secondes écoulées depuis la première transaction enregistrée jusqu'à la transaction en cours.
+    - **V1 à V28** : Variables dérivées d'une réduction de dimensionnalité par l'algorithme PCA (Principal Component Analysis). Ces variables ont été anonymisées pour préserver la confidentialité des clients.
+    - **Amount** : Montant de la transaction.
+    - **Class** : Variable cible indiquant deux classes :
+        - 0 : transaction normale
+        - 1 : transaction frauduleuse.
     """)
+
+#focntion pour remplacer df.info() suite à un problème de compatibilité
+def dataframe_summary(df):
+    summary = pd.DataFrame({
+        'Colonnes': df.columns,
+        'Types de données': df.dtypes,
+        'Valeurs non nulles': df.notnull().sum(),
+        'Valeurs nulles': df.isnull().sum(),
+    })
+    return summary.reset_index(drop=True)
+
 
 #Analyse univariée des vraiables
 def show_univariate_analysis(df):
