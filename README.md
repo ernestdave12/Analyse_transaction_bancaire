@@ -16,9 +16,9 @@ L’ensemble de données, `creditcard.csv`, a été téléchargé depuis [Kaggle
 - **`analyse.ipynb`** : Notebook contenant l'analyse exploratoire des données (EDA).
 - **`app.py`** : Script Python pour le déploiement de l'application Streamlit.
 - **`requirements.txt`** : Liste des dépendances Python nécessaires pour exécuter le projet.
-- **`creditcard.csv`** : Fichier de données (non inclus dans le dépôt GitHub, géré avec Git LFS).
+- **`creditcard.csv/creditcard.csv`** : Fichier de données ( géré avec Git LFS).
 - **`.gitignore`** : Fichier pour ignorer les fichiers sensibles ou volumineux lors du push.
-- **`.gitattributes`** : Configuration pour Git LFS.
+- **`.gitattributes`** : Configuration de Git LFS pour gérer les fichiers volumineux.
 
 ## Prérequis
 - Python 3.7 ou version ultérieure.
