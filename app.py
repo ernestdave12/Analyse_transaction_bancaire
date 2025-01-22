@@ -19,7 +19,7 @@ warnings.filterwarnings("ignore")
 #charger les données
 @st.cache_data
 def load_data():
-    df = pd.read_csv("E:\Apprentissage\PROJET\Projet1\creditcard.csv\creditcard.csv")
+    df = pd.read_csv("./creditcard.csv/creditcard.csv")
     return df
 
 #Description du projet
