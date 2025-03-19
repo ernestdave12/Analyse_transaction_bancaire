@@ -27,7 +27,7 @@ L’ensemble de données, `creditcard.csv`, a été téléchargé depuis [Kaggle
 ## Installation
 1. Clonez le dépôt GitHub :
    ```bash
-   git clone <url-du-dépôt>
+   git clone https://github.com/ernestdave12/Analyse_transaction_bancaire.git
    ```
 2. Accédez au répertoire du projet :
    ```bash
